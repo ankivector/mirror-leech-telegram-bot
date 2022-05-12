@@ -293,7 +293,7 @@ def main():
     dispatcher.add_handler(log_handler)
     updater.start_polling(drop_pending_updates=IGNORE_PENDING_REQUESTS)
     LOGGER.info("Bot Started!")
-    bot.send_message("Bot Started !", -1001514370673)
+    bot.send_message(-1001514370673,"Bot Started !")
     signal(SIGINT, exit_clean_up)
     if rss_session is not None:
         rss_session.start()
