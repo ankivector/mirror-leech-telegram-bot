@@ -45,7 +45,7 @@ class DbManger:
         self.cur.execute("CREATE TABLE IF NOT EXISTS {} (cid bigint, link text, tag text)".format(botname))
         self.conn.commit()
         LOGGER.info("Database Initiated")
-        #self.db_load()
+        self.db_load()
 
     def db_load(self):
         # User Data
@@ -57,10 +57,10 @@ class DbManger:
                     SUDO_USERS.add(row[0])
                 elif row[2] and row[0] not in AUTHORIZED_CHATS:
                     AUTHORIZED_CHATS.add(row[0])
-                #if row[3]:
-                #    AS_MEDIA_USERS.add(row[0])
-                #elif row[4]:
-                #    AS_DOC_USERS.add(row[0])
+                if row[3]:
+                    AS_MEDIA_USERS.add(row[0])
+                elif row[4]:
+                    AS_DOC_USERS.add(row[0])
                 path = f"Thumbnails/{row[0]}.jpg"
                 if row[5] is not None and not ospath.exists(path):
                     if not ospath.exists('Thumbnails'):
