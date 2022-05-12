@@ -56,15 +56,15 @@ def torser(update, context):
     elif len(key) == 1 and SEARCH_API_LINK is None:
         sendMessage("Send a search key along with command", context.bot, update.message)
     elif len(key) == 1:
-        buttons.sbutton('Trending', f"torser {user_id} apitrend")
-        buttons.sbutton('Recent', f"torser {user_id} apirecent")
-        buttons.sbutton("Cancel", f"torser {user_id} cancel")
+        buttons.sbutton('Tʀᴇɴᴅɪɴɢ', f"torser {user_id} apitrend")
+        buttons.sbutton('Rᴇᴄᴇɴᴛ', f"torser {user_id} apirecent")
+        buttons.sbutton("Cᴀɴᴄᴇʟ", f"torser {user_id} cancel")
         button = InlineKeyboardMarkup(buttons.build_menu(2))
         sendMarkup("Send a search key along with command", context.bot, update.message, button)
     elif SEARCH_API_LINK is not None and SEARCH_PLUGINS is not None:
-        buttons.sbutton('Api', f"torser {user_id} apisearch")
-        buttons.sbutton('Plugins', f"torser {user_id} plugin")
-        buttons.sbutton("Cancel", f"torser {user_id} cancel")
+        buttons.sbutton('Aᴘɪ', f"torser {user_id} apisearch")
+        buttons.sbutton('Pʟᴜɢɪɴs', f"torser {user_id} plugin")
+        buttons.sbutton("Cᴀɴᴄᴇʟ", f"torser {user_id} cancel")
         button = InlineKeyboardMarkup(buttons.build_menu(2))
         sendMarkup('Choose tool to search:', context.bot, update.message, button)
     elif SEARCH_API_LINK is not None and SEARCH_PLUGINS is None:
@@ -169,7 +169,7 @@ def _search(key, site, message, method):
         msg += f" <b>result(s) for <i>{key}</i>\nTorrent Site:- <i>{site.capitalize()}</i></b>"
     link = _getResult(search_results, key, message, method)
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("🔎 VIEW", link)
+    buttons.buildbutton("🔎 Vɪᴇᴡ", link)
     button = InlineKeyboardMarkup(buttons.build_menu(1))
     editMessage(msg, message, button)
     if not method.startswith('api'):
@@ -242,7 +242,7 @@ def _api_buttons(user_id, method):
     buttons = button_build.ButtonMaker()
     for data, name in SITES.items():
         buttons.sbutton(name, f"torser {user_id} {data} {method}")
-    buttons.sbutton("Cancel", f"torser {user_id} cancel")
+    buttons.sbutton("Cᴀɴᴄᴇʟ", f"torser {user_id} cancel")
     return InlineKeyboardMarkup(buttons.build_menu(2))
 
 def _plugin_buttons(user_id):
@@ -255,8 +255,8 @@ def _plugin_buttons(user_id):
         qbclient.auth_log_out()
     for siteName in PLUGINS:
         buttons.sbutton(siteName.capitalize(), f"torser {user_id} {siteName} plugin")
-    buttons.sbutton('All', f"torser {user_id} all plugin")
-    buttons.sbutton("Cancel", f"torser {user_id} cancel")
+    buttons.sbutton('Aʟʟ', f"torser {user_id} all plugin")
+    buttons.sbutton("Cᴀɴᴄᴇʟ", f"torser {user_id} cancel")
     return InlineKeyboardMarkup(buttons.build_menu(2))
 
 
