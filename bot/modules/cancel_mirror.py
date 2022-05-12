@@ -58,12 +58,12 @@ def cancel_all(status):
 
 def cancell_all_buttons(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.sbutton("Downloading", "canall down")
-    buttons.sbutton("Uploading", "canall up")
+    buttons.sbutton("Dᴏᴡɴʟᴏᴀᴅɪɴɢ", "canall down")
+    buttons.sbutton("Uᴘʟᴏᴀᴅɪɴɢ", "canall up")
     if QB_SEED:
-        buttons.sbutton("Seeding", "canall seed")
-    buttons.sbutton("Cloning", "canall clone")
-    buttons.sbutton("All", "canall all")
+        buttons.sbutton("Sᴇᴇᴅɪɴɢ", "canall seed")
+    buttons.sbutton("Cʟᴏɴɪɴɢ", "canall clone")
+    buttons.sbutton("Aʟʟ", "canall all")
     button = InlineKeyboardMarkup(buttons.build_menu(2))
     sendMarkup('Choose tasks to cancel.', context.bot, update.message, button)
 
