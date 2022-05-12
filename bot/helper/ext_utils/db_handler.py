@@ -45,7 +45,7 @@ class DbManger:
         self.cur.execute("CREATE TABLE IF NOT EXISTS {} (cid bigint, link text, tag text)".format(botname))
         self.conn.commit()
         LOGGER.info("Database Initiated")
-        self.db_load()
+        #self.db_load()
 
     def db_load(self):
         # User Data
