@@ -21,17 +21,17 @@ PAGE_NO = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Uᴘʟᴏᴀᴅɪɴɢ...📤"
-    STATUS_DOWNLOADING = "Dᴏᴡɴʟᴏᴀᴅɪɴɢ...📥"
-    STATUS_CLONING = "Cʟᴏɴɪɴɢ...♻️"
-    STATUS_WAITING = "Qᴜᴇᴜᴇᴅ...💤"
-    STATUS_FAILED = "Fᴀɪʟᴇᴅ 🚫. Cʟᴇᴀɴɪɴɢ Dᴏᴡɴʟᴏᴀᴅ..."
-    STATUS_PAUSE = "Pᴀᴜsᴇᴅ...⛔️"
-    STATUS_ARCHIVING = "Aʀᴄʜɪᴠɪɴɢ...🔐"
-    STATUS_EXTRACTING = "Exᴛʀᴀᴄᴛɪɴɢ...📂"
-    STATUS_SPLITTING = "Sᴘʟɪᴛᴛɪɴɢ...✂️"
-    STATUS_CHECKING = "CʜᴇᴄᴋɪɴɢUᴘ...📝"
-    STATUS_SEEDING = "Sᴇᴇᴅɪɴɢ...🌧"
+    STATUS_UPLOADING = "`Uᴘʟᴏᴀᴅɪɴɢ...📤`"
+    STATUS_DOWNLOADING = "`Dᴏᴡɴʟᴏᴀᴅɪɴɢ...📥`"
+    STATUS_CLONING = "`Cʟᴏɴɪɴɢ...♻️`"
+    STATUS_WAITING = "`Qᴜᴇᴜᴇᴅ...💤`"
+    STATUS_FAILED = "`Fᴀɪʟᴇᴅ 🚫. Cʟᴇᴀɴɪɴɢ Dᴏᴡɴʟᴏᴀᴅ...`"
+    STATUS_PAUSE = "`Pᴀᴜsᴇᴅ...⛔️`"
+    STATUS_ARCHIVING = "`Aʀᴄʜɪᴠɪɴɢ...🔐`"
+    STATUS_EXTRACTING = "`Exᴛʀᴀᴄᴛɪɴɢ...📂`"
+    STATUS_SPLITTING = "`Sᴘʟɪᴛᴛɪɴɢ...✂️`"
+    STATUS_CHECKING = "`CʜᴇᴄᴋɪɴɢUᴘ...📝`"
+    STATUS_SEEDING = "`Sᴇᴇᴅɪɴɢ...🌧`"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
