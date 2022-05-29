@@ -67,7 +67,8 @@ def stats(update, context):
 
 def start(update, context):
     messages1 = update.effective_message
-    if messages1.id == 1391755824:
+    chat = update.effective_chat
+    if chat.id == 1391755824:
         buttons = ButtonMaker()
         buttons.buildbutton("Channel", "https://t.me/MafiaGiveaways")
         buttons.buildbutton("Owner", "https://t.me/ImDenuwan")
