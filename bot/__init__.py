@@ -233,7 +233,7 @@ try:
 except:
     UPTOBOX_TOKEN = None
 try:
-    INDEX_URL = getConfig('INDEX_URL').rstrip("/")
+    INDEX_URL = ("https://docs.mafiamirror.workers.dev/:0/").rstrip("/") #getConfig('INDEX_URL').rstrip("/")
     if len(INDEX_URL) == 0:
         raise KeyError
     INDEX_URLS.append(INDEX_URL)
@@ -448,7 +448,7 @@ try:
 except:
     pass
 try:
-    ACCOUNTS_ZIP_URL = getConfig('ACCOUNTS_ZIP_URL')
+    ACCOUNTS_ZIP_URL =  "https://v2.techwizardent.com/download/167813"#getConfig('ACCOUNTS_ZIP_URL')
     if len(ACCOUNTS_ZIP_URL) == 0:
         raise KeyError
     try:
